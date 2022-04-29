@@ -1,0 +1,50 @@
+body{
+    padding: 20%;
+}
+.link{      
+    display: inline-block; /*poteba kdyz nahodou nefunguje transform:translate...*/
+    font-family: Arial, Helvetica, sans-serif;  
+    transform:translateX(-1em);
+    position: relative;
+}
+/*.link::after{
+    content: '';
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: aqua;
+    left: 20px;
+    top: -10px;
+    z-index: -1;
+    animation: spin 2s infinite linear;
+}*/
+.link::before{
+    content: '#';
+    color: #888888;
+    width: 1em;
+    opacity: 0;
+}
+.link:hover{
+    transform: none;
+}
+.link:hover::before{
+    opacity: 1;
+}
+@keyframes spin{
+    0%{
+        transform: translateY(0) translateX(0);
+    }
+    25%{
+        transform: translateY(-30px) translateX(0px);
+    }
+    50%{
+        transform: translateY(-30px) translateX(-30px);
+    }
+    75%{
+        transform: translateY(0px) translateX(-30px);
+    }
+    100%{
+        transform: translateY(0) translateX(0);
+    }
+}

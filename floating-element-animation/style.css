@@ -1,0 +1,32 @@
+body{
+    padding-top: 20%;
+}
+.icons{
+    margin: auto;
+    width: fit-content;
+}
+.icon{
+    display: inline-block;
+    font-size: 44px;
+    animation: float 5s ease-in-out infinite;
+}
+ .fa-facebook{
+    animation-delay: 1s;
+}
+.fa-twitter{
+    animation-delay: 2s;
+} 
+@keyframes float{
+    0%{
+        transform: translateY(0);
+    }
+    33%{
+        transform: translateY(-50px);
+    }
+    66%{
+        transform: translateY(50px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
